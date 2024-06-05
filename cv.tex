@@ -19,6 +19,8 @@
 \usepackage{multicol}
 \usepackage{graphicx}
 \usepackage{cfr-lm}
+\usepackage{bibentry}
+\usepackage[square,sort,comma,numbers]{natbib}
 \usepackage[T1]{fontenc}
 
 % Palatino font
@@ -202,15 +204,17 @@
 
 
 %-----------TALKS-----------------
-\section{Talks, Workshops}
-\resumeSubHeadingListStart
+\section{Workshops, Conferences}
+\vspace{0.5mm}
 
-\resumeProject
-{Pécs Workshop on Quantum Information}
-{Clique Search on Erdős-Rényi Graphs -- Methods for D-Wave Quantum Annealers}
-{May 10th, 2024}
+\nobibliography{ref}
+\bibliographystyle{unsrt}
 
-\resumeSubHeadingListEnd
+\begin{enumerate}
+  \item \bibentry{koniorczyk2024graph}
+  \item \bibentry{pecs2024clique}
+\end{enumerate}
+
 \vspace{-5.5mm}
 
 
@@ -220,14 +224,15 @@
 
 \resumeProject
 {Mincy}
-{Improved Consistency Models in JAX, source: \href{https://github.com/leakedweights/mincy}{\texttt{leakedweights/mincy}}}
+{Tools for training Consistency Models in JAX, source: \href{https://github.com/leakedweights/mincy}{\texttt{leakedweights/mincy}}}
 {2024}
 
 \resumeItemListStart
 \item {Tools \& technologies: JAX, Flax}
-\item {JAX implementation of \href{https://arxiv.org/abs/2310.14189}{\textit{Improved Techniques for Training Consistency Models}}.}
-% \item {Reproduced results and plots from the original research paper.}
-% \item {Classifier-free guidance, inpainting, and CLIP integration.}
+\item {Implementation of \href{https://arxiv.org/abs/2310.14189}{\textit{Improved Techniques for Training Consistency Models}}}.
+\item {Implementation of \href{https://arxiv.org/abs/2403.06807}{\textit{Multistep Consistency Models}}} (work in progress).
+\item {Implementation of \href{https://arxiv.org/abs/2310.04378}{\textit{Latent Consistency Models}}} (work in progress).
+\item {Classifier-free guidance, inpainting, etc. (work in progress).}
 \resumeItemListEnd
 \vspace{-2mm}
 
