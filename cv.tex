@@ -124,7 +124,7 @@
 
 \newcommand{\name}{Kristóf Váradi} % Your Name
 \newcommand{\course}{Computer Engineering} % Your Program
-\newcommand{\phone}{70-635-3303} % Your Phone Number
+\newcommand{\phone}{70 635 3303} % Your Phone Number
 \newcommand{\emaila}{vkristof20@protonmail.com} %Email 1
 \newcommand{\emailb}{kristofvaradi@edu.bme.hu} %Email 2
 
@@ -154,14 +154,12 @@
 \vspace{-2.0mm}
 \resumeItemListStart
 \item {Specialization: Systems Engineering}
-\item {Coursework: Language Models for Predicting Clinical Trial Outcomes}
+\item {Thesis topic: Language Models for Predicting Clinical Trial Outcomes}
 \item {Notable courses: Information Theory, Probability, Artificial Intelligence}
-\item {GPA: 5/5 (prev. semester) 3.84/5 (cumulative)}
+\item {GPA: 5/5 (prev. semester) 4.12/5 (cumulative)}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 \vspace{-8.5mm}
-
-
 
 \section{Experience}
 
@@ -172,18 +170,19 @@
 {Research Assistant, Quantum Information and Complex Systems Research Group}{2024 - present}
 \vspace{-2.0mm}
 \resumeItemListStart
-\item {Contribution to Opreations Research and Quantum Computing projects.}
+\item {Contribution to Opreations Research and Quantum Computing projects \\ mostly involving graph algorithms and quantum annealers.}
 \resumeItemListEnd
 
 \vspace{-1.0mm}
 
 \resumeSubheading
 {Budapest University of Technology and Economics}{Budapest}
-{Teaching Assistant, Databases (BMEVITMAB04)}{2023 - present}
+{Teaching Assistant}{2023 - present}
 \vspace{-2.0mm}
 \resumeItemListStart
-\item {Teaching laboratory classes for second-year undergraduate students.}
-\item {Relational Database Design, SQL and Query Optimization within Oracle Database.}
+\item {Laboratory classes for Databases (BMEVITMAB04), '23 and '24 autumn.}
+\item {Laboratory classes for Basics of Programming (BMEVIEEBA01), '24 autumn.}
+\item {Laboratory classes for Mobile and Web Development (BMEVIAUAC00), '24 autumn.}
 \resumeItemListEnd
 
 \vspace{-1.0mm}
@@ -203,24 +202,26 @@
 \vspace{-8.5mm}
 
 
-%-----------TALKS-----------------
-\section{Workshops, Conferences}
-\vspace{0.5mm}
-
-\nobibliography{ref}
-\bibliographystyle{unsrt}
-
-\begin{enumerate}
-  \item \bibentry{koniorczyk2024graph}
-  \item \bibentry{pecs2024clique}
-\end{enumerate}
-
-\vspace{-5.5mm}
-
 
 %-----------PROJECTS-----------------
 \section{Software Projects}
 \resumeSubHeadingListStart
+
+\resumeProject
+{Isocline}
+{Text-guided consistency model for digital terrain synthesis: \href{https://github.com/leakedweights/isocline}{\texttt{leakedweights/isocline}}.}
+{2024}
+
+\resumeItemListStart
+\item {Tools \& technologies: JAX, Flax, HF Transformers}
+\item {Implementation of improved consistency training for terrain heightmaps.}
+\item {Dataset curation and augmentation with terrain captions.}
+% \item {Implementation of \href{https://arxiv.org/abs/2403.06807}{\textit{Multistep Consistency Models}}} (work in progress).
+% \item {Implementation of \href{https://arxiv.org/abs/2310.04378}{\textit{Latent Consistency Models}}} (work in progress).
+\item {Text-guidance with CLIP embeddings.}
+\resumeItemListEnd
+\vspace{-2mm}
+
 
 \resumeProject
 {Mincy}
@@ -229,13 +230,12 @@
 
 \resumeItemListStart
 \item {Tools \& technologies: JAX, Flax}
-\item {Implementation of \href{https://arxiv.org/abs/2310.14189}{\textit{Improved Techniques for Training Consistency Models}}}.
-\item {Implementation of \href{https://arxiv.org/abs/2403.06807}{\textit{Multistep Consistency Models}}} (work in progress).
-\item {Implementation of \href{https://arxiv.org/abs/2310.04378}{\textit{Latent Consistency Models}}} (work in progress).
-\item {Classifier-free guidance, inpainting, etc. (work in progress).}
+\item {Implementation of \textit{Improved Techniques for Training Consistency Models}}.
+% \item {Implementation of \href{https://arxiv.org/abs/2403.06807}{\textit{Multistep Consistency Models}}} (work in progress).
+% \item {Implementation of \href{https://arxiv.org/abs/2310.04378}{\textit{Latent Consistency Models}}} (work in progress).
+\item {Classifier and classifier-free guidance}
 \resumeItemListEnd
 \vspace{-2mm}
-
 
 \resumeProject
 {Thorium}
@@ -253,13 +253,28 @@
 \resumeSubHeadingListEnd
 \vspace{-5.5mm}
 
-%-----------Technical skills-----------------
+%-----------TALKS-----------------
+\section{Workshops, Presentations}
+\vspace{0.5mm}
+
+\nobibliography{ref}
+\bibliographystyle{unsrt}
+
+\begin{enumerate}
+  \item \bibentry{koniorczyk2024graph}
+  \item \bibentry{pecs2024clique}
+\end{enumerate}
+
+\vspace{-5.5mm}
+
+
+%-----------TECHNICAL SKILLS-----------------
 \section{Skills and Technologies}
 \begin{itemize}[leftmargin=0.1in, label={}]
   \small{\item{
-        Programming Languages{: Python, TypeScript} \\
         Cloud/Databases{: AWS, SQL, Terraform, Docker} \\
-        Languages{: English (C1), Hungarian (Native), German (Elementary)} \\
+        Preferred programming languages{: Python, TypeScript, C++} \\
+        Languages{: English (professional), Hungarian (native), German (elementary)} \\
         }}
 \end{itemize}
 \vspace{-16pt}
