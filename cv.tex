@@ -17,6 +17,7 @@
 \usepackage{hyperref}
 \usepackage{fontawesome5}
 \usepackage{multicol}
+\usepackage{enumitem}
 \usepackage{graphicx}
 \usepackage{cfr-lm}
 \usepackage{bibentry}
@@ -120,7 +121,7 @@
 \newcommand{\name}{Kristóf Váradi} % Your Name
 \newcommand{\course}{Computer Engineering} % Your Program
 \newcommand{\phone}{70 635 3303} % Your Phone Number
-\newcommand{\emaila}{vkristof20@protonmail.com} %Email 1
+\newcommand{\emaila}{kv.kristofvaradi@gmail.com} %Email 1
 \newcommand{\emailb}{kristofvaradi@edu.bme.hu} %Email 2
 
 
@@ -130,10 +131,10 @@
 
 \parbox{\dimexpr\linewidth\relax}{
   \begin{tabularx}{\linewidth}{L r} \\
-    \Large \name        & {\raisebox{0.0\height}\ +36-\phone} \\
+    \Large \name        & {\raisebox{0.0\height}\ +36 \phone} \\
     \course             & \href{mailto:\emailb}{\raisebox{0.0\height}\ {\emailb}} \\
-    {TU Budapest}       & \href{https://github.com/leakedweights}{\raisebox{0.0\height}\ {github.com/leakedweights}} \\
-    {Budapest, Hungary} &
+    {TU Budapest}       & \href{mailto:\emaila}{\raisebox{0.0\height}\ {\emaila}} \\
+    {Budapest, Hungary} & \href{https://github.com/leakedweights}{\raisebox{0.0\height}\ {github.com/leakedweights}} \\
   \end{tabularx}
 }
 
@@ -141,18 +142,29 @@
 
 
 \section{Education}
+
 \resumeSubHeadingListStart
+\resumeSubheading
+{Budapest University of Technology and Economics}{}
+{Computer Engineering, M.Sc.}{2025 - 2027}
+
+\resumeItemListStart
+\item {Primary specialization: Data Science and Artificial Intelligence}
+\item {Secondary specialization: Theoretical Computer Science}
+\resumeItemListEnd
+
 \resumeSubheading
 {Budapest University of Technology and Economics}{}
 {Computer Engineering, B.Sc.}{2021 - 2025}
 
 \resumeItemListStart
 \item {Specialization: Systems Engineering}
-\item {Thesis topic: Language Models for Predicting Clinical Trial Outcomes}
-\item {Notable courses: Information Theory, Probability, Artificial Intelligence}
-\item {GPA: 5/5 (prev. semester) 4.12/5 (cumulative)}
+\item {Thesis: Mechanistic Interpretability for Molecular Language Models in Drug Development}
+% \item {Notable courses: Information Theory, Probability, Artificial Intelligence}
+\item {GPA: 5/5 (last 3 semesters), 4.24/5 (cumulative)}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
+
 \vspace{-8.5mm}
 
 \section{Experience}
@@ -160,10 +172,19 @@
 \resumeSubHeadingListStart
 
 \resumeSubheading
-{Artificial Intelligence National Laboratory}{Budapest}
+{E-Group ICT Software}{Budapest}
+{Research Engineer}{2024 - present}
+\resumeItemListStart
+\item {Parameter-efficient multimodal language models.}
+\item {Causal discovery and reasoning for natural language generation.}
+\item {Federated transformer training.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Budapest University of Technology and Economics}{Budapest}
 {Student Researcher}{2024 - present}
 \resumeItemListStart
-\item {Contribution to research projects in Machine Learning for Drug Discovery involving \\ Mechanistic Interpretability for steering molecular language models.}
+\item {Machine Learning for Drug Discovery involving Mechanistic Interpretability\\ for steering and explaining molecular language models.}
 \resumeItemListEnd
 
 \vspace{-1.0mm}
@@ -172,8 +193,8 @@
 {HUN-REN Wigner Research Centre for Physics}{Budapest}
 {Research Assistant}{2024}
 \resumeItemListStart
-\item {Contribution to Opreations Research and Quantum Computing research projects \\ at the Quantum Information and Complex Systems Research Group.}
-\item {Theoretical analysis of optimization algorithms for solving graph problems \\ on quantum annealers.}
+\item {Opreations Research and Quantum Computing projects at the \\ Quantum Information and Complex Systems Research Group.}
+\item {Analysis of optimization algorithms for solving graph problems on quantum annealers.}
 \resumeItemListEnd
 
 \vspace{-1.0mm}
@@ -190,6 +211,20 @@
 
 \resumeSubHeadingListEnd
 \vspace{-8.5mm}
+
+%-----------RESEARCH-----------------
+\section{Research}
+\vspace{2mm}
+
+\nobibliography{ref}
+\bibliographystyle{unsrt}
+
+\begin{itemize}[label={}, leftmargin=0.2in, itemindent=-0.1in]
+  \item \bibentry{bme2024tdk} \\
+  \textit{First place - Therapeutics Section}
+  \item \bibentry{koniorczyk2024graph}
+  \item \bibentry{pecs2024clique}
+\end{itemize}
 
 %-----------TEACHING-----------------
 \section{Teaching}
@@ -211,65 +246,51 @@
 \resumeSubHeadingListEnd
 \vspace{-8.5mm}
 
-%-----------PROJECTS-----------------
-\section{Software Projects}
-\resumeSubHeadingListStart
+% %-----------PROJECTS-----------------
+% \section{Software Projects}
+% \resumeSubHeadingListStart
 
-\resumeProject
-{Isocline}
-{Text-guided consistency model for digital terrain synthesis: \href{https://github.com/leakedweights/isocline}{\texttt{leakedweights/isocline}}.}
-{2024}
+% \resumeProject
+% {Isocline}
+% {Text-guided consistency model for digital terrain synthesis: \href{https://github.com/leakedweights/isocline}{\texttt{leakedweights/isocline}}.}
+% {2024}
 
-\resumeItemListStart
-\item {Tools \& technologies: JAX, Flax, HF Transformers}
-\item {Implementation of improved consistency training for terrain heightmaps.}
-\item {Dataset curation and augmentation with terrain captions.}
-% \item {Implementation of \href{https://arxiv.org/abs/2403.06807}{\textit{Multistep Consistency Models}}} (work in progress).
-% \item {Implementation of \href{https://arxiv.org/abs/2310.04378}{\textit{Latent Consistency Models}}} (work in progress).
-\item {Text-guidance with CLIP embeddings.}
-\resumeItemListEnd
-\vspace{-2mm}
-
-
-\resumeProject
-{Mincy}
-{Tools for training Consistency Models in JAX, source: \href{https://github.com/leakedweights/mincy}{\texttt{leakedweights/mincy}}}
-{2024}
-
-\resumeItemListStart
-\item {Tools \& technologies: JAX, Flax}
-\item {Implementation of \textit{Improved Techniques for Training Consistency Models}}.
-% \item {Implementation of \href{https://arxiv.org/abs/2403.06807}{\textit{Multistep Consistency Models}}} (work in progress).
-% \item {Implementation of \href{https://arxiv.org/abs/2310.04378}{\textit{Latent Consistency Models}}} (work in progress).
-\item {Classifier and classifier-free guidance}
-\resumeItemListEnd
-\vspace{-2mm}
+% \resumeItemListStart
+% \item {Tools \& technologies: JAX, Flax, HF Transformers}
+% \item {Implementation of improved consistency training for terrain heightmaps.}
+% \item {Dataset curation and augmentation with terrain captions.}
+% % \item {Implementation of \href{https://arxiv.org/abs/2403.06807}{\textit{Multistep Consistency Models}}} (work in progress).
+% % \item {Implementation of \href{https://arxiv.org/abs/2310.04378}{\textit{Latent Consistency Models}}} (work in progress).
+% \item {Text-guidance with CLIP embeddings.}
+% \resumeItemListEnd
+% \vspace{-2mm}
 
 
-\resumeSubHeadingListEnd
-\vspace{-5.5mm}
+% \resumeProject
+% {Mincy}
+% {Tools for training Consistency Models in JAX, source: \href{https://github.com/leakedweights/mincy}{\texttt{leakedweights/mincy}}}
+% {2024}
 
-%-----------TALKS-----------------
-\section{Workshops, Presentations}
-\vspace{0.5mm}
+% \resumeItemListStart
+% \item {Tools \& technologies: JAX, Flax}
+% \item {Implementation of \textit{Improved Techniques for Training Consistency Models}}.
+% % \item {Implementation of \href{https://arxiv.org/abs/2403.06807}{\textit{Multistep Consistency Models}}} (work in progress).
+% % \item {Implementation of \href{https://arxiv.org/abs/2310.04378}{\textit{Latent Consistency Models}}} (work in progress).
+% \item {Classifier and classifier-free guidance}
+% \resumeItemListEnd
+% \vspace{-2mm}
 
-\nobibliography{ref}
-\bibliographystyle{unsrt}
 
-\begin{enumerate}
-  \item \bibentry{koniorczyk2024graph}
-  \item \bibentry{pecs2024clique}
-\end{enumerate}
-
-\vspace{-5.5mm}
+% \resumeSubHeadingListEnd
+% \vspace{-5.5mm}
 
 
 %-----------TECHNICAL SKILLS-----------------
-\section{Skills and Technologies}
+\section{Skills, Preferred Technologies}
 \begin{itemize}[leftmargin=0.1in, label={}]
   \small{\item{
-        Cloud/Databases{: AWS, SQL, Terraform, Docker} \\
-        Preferred programming languages{: Python, TypeScript, C++} \\
+        Tools{: JAX} \\
+        Programming languages{: Python, Rust, C++} \\
         Languages{: English (professional), Hungarian (native), German (elementary)} \\
         }}
 \end{itemize}
